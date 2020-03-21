@@ -35,7 +35,7 @@ public class Task1 {
 
         if ("winter".equalsIgnoreCase(season)) {
             res = "It is cold";
-        } else  if ("spring".equalsIgnoreCase(season)) {
+        } else if ("spring".equalsIgnoreCase(season)) {
             res = "It is not that cold any more";
         } else if ("summer".equalsIgnoreCase(season)) {
             res = "It is hot!!!";
@@ -54,16 +54,16 @@ public class Task1 {
         }
 
         switch (season.toLowerCase()) {
-            case ("winter") :
+            case ("winter"):
                 res = "It is cold";
                 break;
-            case ("spring") :
+            case ("spring"):
                 res = "It is not that cold any more";
                 break;
-            case ("summer") :
+            case ("summer"):
                 res = "It is hot!!!";
                 break;
-            case ("autumn") :
+            case ("autumn"):
                 res = "It is becoming colder...";
                 break;
         }
