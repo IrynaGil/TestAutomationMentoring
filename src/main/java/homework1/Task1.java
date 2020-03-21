@@ -2,34 +2,73 @@ package homework1;
 
 public class Task1 {
     public static void main(String[] args) {
-        seasonWeather1("spring");
-        seasonWeather1("summer");
-        seasonWeather1("autumn");
-        seasonWeather1("winter");
+        seasonWeatherSimple("spring");
+        seasonWeatherSimple("summer");
+        seasonWeatherSimple("autumn");
+        seasonWeatherSimple("winter");
 
-        seasonWeather2("spring");
-        seasonWeather2("summer");
-        seasonWeather2("autumn");
-        seasonWeather2("winter");
+        seasonWeatherComplex("spring");
+        seasonWeatherComplex("summer");
+        seasonWeatherComplex("autumn");
+        seasonWeatherComplex("winter");
+        seasonWeatherComplex("cool season");
     }
-    public static void seasonWeather1(String season) {
-        if (season == "winter"){
+
+    public static void seasonWeatherSimple(String season) {
+        if (season.equals("winter")) {
             System.out.println("It is cold");
         }
     }
 
-    public static void seasonWeather2(String season) {
-        if (season == "winter"){
-            System.out.println("It is cold");
-        }
-        else if(season == "spring"){
-            System.out.println("It is not that cold any more");
-        }
-        else if(season == "summer"){
-            System.out.println("It is hot!!!");
-        }
-        else if(season == "autumn"){
-            System.out.println("It is becoming colder...");
-        }
+    public static void seasonWeatherComplex(String season) {
+        String describedWeatherWithIfStatements = weatherDescriptionIfStatements(season);
+        System.out.println("if st: " + describedWeatherWithIfStatements);
+
+        String describedWeatherWithSwitch = weatherDescriptionWithSwitch(season);
+        System.out.println("switch: " + describedWeatherWithSwitch);
+
+        System.out.println("");
     }
+
+    public static String weatherDescriptionIfStatements(String season) {
+        String res = "wrong input...";
+
+        if ("winter".equalsIgnoreCase(season)) {
+            res = "It is cold";
+        } else  if ("spring".equalsIgnoreCase(season)) {
+            res = "It is not that cold any more";
+        } else if ("summer".equalsIgnoreCase(season)) {
+            res = "It is hot!!!";
+        } else if ("autumn".equalsIgnoreCase(season)) {
+            res = "It is becoming colder...";
+        }
+
+        return res;
+    }
+
+    public static String weatherDescriptionWithSwitch(String season) {
+        String res = "wrong input...";
+
+        if (season == null) {
+            return res;
+        }
+
+        switch (season.toLowerCase()) {
+            case ("winter") :
+                res = "It is cold";
+                break;
+            case ("spring") :
+                res = "It is not that cold any more";
+                break;
+            case ("summer") :
+                res = "It is hot!!!";
+                break;
+            case ("autumn") :
+                res = "It is becoming colder...";
+                break;
+        }
+
+        return res;
+    }
+
 }
