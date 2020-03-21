@@ -3,7 +3,8 @@ package homework1;
 import org.junit.Test;
 
 import static homework1.Task2.priceEvaluation;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class Task2Test {
 

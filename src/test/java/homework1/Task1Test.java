@@ -2,7 +2,8 @@ package homework1;
 
 import org.junit.Test;
 
-import static homework1.Task1.*;
+import static homework1.Task1.weatherDescriptionIfStatements;
+import static homework1.Task1.weatherDescriptionWithSwitch;
 import static org.junit.Assert.assertEquals;
 
 public class Task1Test {
@@ -66,6 +67,7 @@ public class Task1Test {
         assertEquals(expected, weatherDescriptionIfStatements(season));
         assertEquals(expected, weatherDescriptionWithSwitch(season));
     }
+
     @Test
     public void shouldReturnItIsBecomingColder4NewExactWord() {
         String expected = "It is becoming colder...";

@@ -2,12 +2,12 @@ package homework1;
 
 public class Task2 {
     public static void main(String[] args) {
-        displayPriceEvaluation(999);
-        displayPriceEvaluation(1000);
-        displayPriceEvaluation(1001);
+        printPriceEvaluation(999);
+        printPriceEvaluation(1000);
+        printPriceEvaluation(1001);
     }
 
-    public static void displayPriceEvaluation(int price) {
+    public static void printPriceEvaluation(int price) {
         System.out.println(priceEvaluation(price));
     }
 
