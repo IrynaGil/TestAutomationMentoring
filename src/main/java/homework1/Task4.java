@@ -13,26 +13,35 @@ public class Task4 {
     }
 
     public static void printWorkingWeek(String dayOfTheWeek) {
-        System.out.println(detectWeekend(dayOfTheWeek));
+        System.out.println(detectWeekend2(dayOfTheWeek));
     }
 
-    public static String detectWeekend (String dayOfTheWeek) {
-        String res = "wrong input...";
+    public static String detectWeekend1(String dayOfTheWeek) {
+        String res;
 
-        if ("Понедельник".equalsIgnoreCase(dayOfTheWeek)) {
-            res = "будний";
-        } else if ("Вторник".equalsIgnoreCase(dayOfTheWeek)) {
-            res = "будний";
-        } else if ("Среда".equalsIgnoreCase(dayOfTheWeek)) {
-            res = "будний";
-        } else if ("Четверг".equalsIgnoreCase(dayOfTheWeek)) {
-            res = "будний";
-        } else if ("Пятница".equalsIgnoreCase(dayOfTheWeek)) {
-            res = "будний";
-        } else if ("Суббота".equalsIgnoreCase(dayOfTheWeek)) {
+        if ("Суббота".equalsIgnoreCase(dayOfTheWeek) || "Воскресенье".equalsIgnoreCase(dayOfTheWeek)) {
             res = "выходной";
-        } else if ("Воскресенье".equalsIgnoreCase(dayOfTheWeek)) {
+        } else {
+            res = "будний";
+        }
+
+        return res;
+    }
+
+
+    public static String detectWeekend2(String dayOfTheWeek) {
+        String res;
+
+        if ("Понедельник".equalsIgnoreCase(dayOfTheWeek) ||
+                "Вторник".equalsIgnoreCase(dayOfTheWeek) ||
+                "Среда".equalsIgnoreCase(dayOfTheWeek) ||
+                "Четверг".equalsIgnoreCase(dayOfTheWeek) ||
+                "Пятница".equalsIgnoreCase(dayOfTheWeek)) {
+            res = "будний";
+        } else if ("Суббота".equalsIgnoreCase(dayOfTheWeek) || "Воскресенье".equalsIgnoreCase(dayOfTheWeek)) {
             res = "выходной";
+        } else {
+            res = "wrong input...";
         }
 
         return res;
